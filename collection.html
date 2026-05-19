@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="background:#18120b"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Noto+Serif:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Shop All — Karupatti Kadai</title>
+<link rel="icon" type="image/png" href="/video/logo.png" />
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+}
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD3UTIs_k9aWhBr0TzODmVZEHzk0Umcj_b5FOd7WfLnk2X4pgRTf76y8jN38h0_cjvn59IM2cHAQvIJVqle3jUkWb0dQKbTO3oQW7EzQha_7OgLEuR9egjHP6WMG6mIRYaqhEoELRqyXtBguaZoo1yMSUDTK7Argjds57-FGHZyIm2-LLEfMJKC6uTCPB05WD3FDAtOlJucQMDWMM-iBhoDQX78BVvVc5PuXS1YZCv3yF7SKAkyq0Qw7dHNhovUMGHLPrXsTShxJsY);
+    opacity: 0.03;
+    pointer-events: none
+}
+.glass-card {
+    backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, rgba(59, 52, 43, 0.4) 0%, rgba(24, 18, 11, 0.6) 100%)
+}
+.gold-glow-hover:hover {
+    box-shadow: 0 0 30px rgba(255, 185, 82, 0.15);
+    transform: translatey(-4px)
+}
+.jaggery-gradient {
+    background: radial-gradient(circle at center, #3c2500 0%, #18120b 100%) fixed
+}
+@media (max-width: 768px) {
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+</style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#825500",
+                        "on-primary": "#452b00",
+                        "on-tertiary-fixed-variant": "#3b4d14",
+                        "secondary-fixed-dim": "#e3bfad",
+                        "tertiary-fixed": "#d4eca2",
+                        "on-secondary-fixed-variant": "#5a4134",
+                        "error-container": "#93000a",
+                        "background": "#18120b",
+                        "on-secondary-container": "#d4b19f",
+                        "primary-fixed-dim": "#ffb952",
+                        "surface-container-low": "#211b13",
+                        "surface-variant": "#3b342b",
+                        "tertiary-fixed-dim": "#b8cf88",
+                        "on-background": "#eee0d3",
+                        "primary-container": "#c58308",
+                        "on-tertiary-fixed": "#141f00",
+                        "on-primary-fixed-variant": "#633f00",
+                        "surface-container-high": "#302920",
+                        "surface-container-highest": "#3b342b",
+                        "primary-fixed": "#ffddb4",
+                        "inverse-surface": "#eee0d3",
+                        "primary": "#ffb952",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#40382f",
+                        "on-primary-fixed": "#291800",
+                        "on-error": "#690005",
+                        "outline-variant": "#514535",
+                        "secondary": "#e3bfad",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#18120b",
+                        "tertiary-container": "#839857",
+                        "on-surface-variant": "#d6c4af",
+                        "on-tertiary": "#253600",
+                        "surface-container": "#251f17",
+                        "tertiary": "#b8cf88",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-dim": "#18120b",
+                        "on-surface": "#eee0d3",
+                        "secondary-container": "#5d4336",
+                        "on-secondary-fixed": "#2a170c",
+                        "inverse-on-surface": "#362f27",
+                        "outline": "#9e8e7b",
+                        "on-secondary": "#422b1f",
+                        "on-primary-container": "#3c2500",
+                        "surface-container-lowest": "#130d07",
+                        "surface-tint": "#ffb952",
+                        "on-tertiary-container": "#1f2e00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "label-caps": ["Be Vietnam Pro"],
+                        "headline-md": ["Noto Serif"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+                        "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="jaggery-gradient text-on-surface font-body-md selection:bg-primary/30 min-h-screen relative overflow-x-hidden">
+<!-- Grain Overlay -->
+<div class="fixed inset-0 grain-overlay z-[60]"></div>
+<!-- Floating Particles Simulation -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+<div class="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/20 rounded-full blur-sm"></div>
+<div class="absolute top-3/4 left-1/3 w-3 h-3 bg-secondary/10 rounded-full blur-md"></div>
+<div class="absolute top-1/2 right-1/4 w-2 h-2 bg-primary/15 rounded-full blur-sm"></div>
+<div class="absolute bottom-10 right-1/3 w-4 h-4 bg-tertiary/10 rounded-full blur-lg"></div>
+</div>
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-xl fixed left-0 right-0 top-0 z-50 border-b border-outline-variant/20 shadow-2xl shadow-primary/5">
+<div class="flex justify-between items-center w-full px-4 md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4 md:gap-8">
+<a href="/" class="flex items-center gap-2 md:gap-3 font-display-lg text-xl md:text-2xl text-primary drop-shadow-[0_2px_4px_rgba(255,185,82,0.3)] hover:opacity-90 transition-opacity">
+  <img src="/video/logo.png" alt="Karupatti Kadai Logo" class="w-8 h-8 rounded-full border border-primary/20 object-cover shadow-md" />
+  <span>Karupatti Kadai</span>
+</a>
+<div class="hidden md:flex gap-6">
+<a class="font-body-md text-body-md Navigation text-on-surface-variant hover:text-primary transition-colors duration-300" href="/#our-story">Our Grove</a>
+<a class="font-body-md text-body-md Navigation text-primary border-b-2 border-primary pb-1 font-bold" href="/collection">Shop All</a>
+<a class="font-body-md text-body-md Navigation text-on-surface-variant hover:text-primary transition-colors duration-300" href="/admin-panel" data-admin-only style="display:none">Admin</a>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-all text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+<a href="/checkout" class="p-2 hover:bg-primary/10 rounded-full transition-all text-primary relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span data-cart-count class="absolute top-1 right-1 w-4 h-4 bg-primary text-on-primary text-[10px] flex items-center justify-center rounded-full font-bold" style="display:none">0</span>
+</a>
+<a href="/auth" data-auth-trigger class="p-2 hover:bg-primary/10 rounded-full transition-all text-primary">
+<span class="material-symbols-outlined">account_circle</span>
+</a>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-4 md:px-gutter pt-24 md:pt-32 pb-section-gap flex flex-col md:flex-row gap-8 md:gap-12 relative z-10">
+<!-- Mobile Top Scroll Navigation -->
+<div class="md:hidden -mx-4 px-4 overflow-x-auto hide-scrollbar flex gap-3 py-2 sticky top-[73px] bg-background/90 backdrop-blur-md z-40 border-b border-outline-variant/10">
+<button data-category="" class="whitespace-nowrap px-4 py-2 bg-primary text-on-primary rounded-full text-label-caps font-bold text-xs">All Products</button>
+<button data-category="rare" class="whitespace-nowrap px-4 py-2 bg-surface-container text-on-surface-variant rounded-full text-label-caps font-bold text-xs">Rare Batch</button>
+</div>
+<!-- Desktop Sidebar Filter -->
+<aside class="hidden md:flex w-72 flex-col gap-8">
+<div class="glass-card rounded-xl p-6 border border-outline-variant/20 shadow-lg">
+<div class="mb-8">
+<h2 class="font-headline-md text-headline-md text-primary mb-2">The Collection</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Pure Ancestral Gold</p>
+</div>
+<div class="flex flex-col gap-2">
+<button data-category="" class="flex items-center gap-4 px-4 py-3 bg-primary-container text-on-primary-container rounded-r-full font-bold shadow-sm text-left">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-label-caps text-label-caps">All Products</span>
+</button>
+</div>
+
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<header class="mb-8 md:mb-12 flex justify-between items-end px-0">
+<div class="max-w-[70%]">
+<h1 class="font-display-lg text-headline-md md:text-headline-xl text-primary mb-1 md:mb-2">Liquid Gold Catalog</h1>
+<p class="text-on-surface-variant font-body-md md:font-body-lg text-sm md:text-base">Sourced from the heart of the sacred palm groves.</p>
+</div>
+
+</header>
+<div id="product-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+  <!-- Dynamic cards will be injected here -->
+</div>
+
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full relative overflow-hidden border-t border-outline-variant/20 shadow-inner shadow-background/50">
+<div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-gutter py-12 md:py-section-gap max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<span class="font-display-lg text-primary text-headline-md block mb-4">Karupatti Kadai</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant max-w-xs mx-auto md:mx-0">© 2026 Karupatti Kadai. Liquid Gold from the Palm Grove.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex flex-wrap justify-center gap-4 md:gap-6">
+<a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary/50 underline-offset-4 transition-all" href="#">Privacy</a>
+<a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary/50 underline-offset-4 transition-all" href="#">Shipping</a>
+
+<a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary/50 underline-offset-4 transition-all" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-primary hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-primary hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined">public</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom decorative element -->
+<div class="h-1 w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+</footer>
+<!-- FAB (Bottom Navigation Bar for Mobile) -->
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center bg-surface/90 backdrop-blur-xl border border-outline-variant/20 rounded-full px-6 py-3 shadow-2xl z-50 gap-8">
+<a href="/" class="text-on-surface-variant"><span class="material-symbols-outlined">home</span></a>
+<a href="/collection" class="text-primary"><span class="material-symbols-outlined">explore</span></a>
+<a href="/checkout" class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center -mt-8 border-4 border-background relative"><span class="material-symbols-outlined">shopping_basket</span><span data-cart-count class="absolute -top-1 -right-1 w-4 h-4 bg-error text-on-error text-[9px] flex items-center justify-center rounded-full font-bold" style="display:none">0</span></a>
+<a href="/profile" class="text-on-surface-variant"><span class="material-symbols-outlined">favorite</span></a>
+<a href="/auth" data-auth-trigger class="text-on-surface-variant"><span class="material-symbols-outlined">person</span></a>
+</div>
+<!-- Desktop Only FAB -->
+<button onclick="window.location.href='/checkout'" class="hidden md:flex fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-[32px]">shopping_basket</span>
+</button>
+<script>
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = '9999';
+    document.body.appendChild(canvas);
+
+    let particles = [];
+    const colors = ['#ffb952', '#c58308', '#ffddb4'];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+            this.opacity = 1;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.opacity > 0.02) this.opacity -= 0.02;
+        }
+
+        draw() {
+            ctx.fillStyle = this.color;
+            ctx.globalAlpha = this.opacity;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+            // Glow effect
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = this.color;
+        }
+    }
+
+    function handleParticles() {
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            if (particles[i].opacity <= 0.02) {
+                particles.splice(i, 1);
+                i--;
+            }
+        }
+    }
+
+    window.addEventListener('mousemove', function(e) {
+        for (let i = 0; i < 2; i++) {
+            particles.push(new Particle(e.x, e.y));
+        }
+    });
+
+    // Touch support for particles
+    window.addEventListener('touchmove', function(e) {
+        for (let i = 0; i < 1; i++) {
+            particles.push(new Particle(e.touches[0].clientX, e.touches[0].clientY));
+        }
+    }, { passive: true });
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        handleParticles();
+        requestAnimationFrame(animate);
+    }
+    animate();
+</script>
+<script src="/js/app.js"></script>
+<script>
+// Dynamic product loading from API
+let currentCategory = '';
+let currentSort = '-created_at';
+
+async function loadProducts() {
+  const grid = document.getElementById('product-grid');
+  try {
+    const params = {};
+    if (currentCategory) params.category = currentCategory;
+    if (currentSort) params.sort = currentSort;
+    const data = await KK.getProducts(params);
+    const products = data.results || data;
+    if (!products.length) {
+      grid.innerHTML = '<p class="col-span-full text-center text-on-surface-variant py-12">No products found</p>';
+      return;
+    }
+    grid.innerHTML = products.map(p => `
+      <div class="glass-card group rounded-xl p-3 md:p-4 border border-outline-variant/10 gold-glow-hover transition-all duration-500 overflow-hidden relative flex flex-col">
+        <a href="/product?slug=${p.slug}" class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4 md:mb-6 relative block">
+          <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="${p.image_url}"/>
+          ${p.badge ? `<span class="absolute top-2 right-2 md:top-3 md:right-3 ${p.badge_style || 'bg-primary/80 text-on-primary'} backdrop-blur-md px-2 py-0.5 md:px-3 md:py-1 rounded-full font-label-caps text-[8px] md:text-label-caps">${p.badge}</span>` : ''}
+        </a>
+        <div class="px-1 flex-1 flex flex-col">
+          <a href="/product?slug=${p.slug}"><h3 class="font-headline-md text-sm md:text-headline-md text-on-surface mb-1">${p.name}</h3></a>
+          <p class="text-on-surface-variant text-[10px] md:text-body-md mb-3 md:mb-4 line-clamp-2 leading-tight">${p.short_description}</p>
+          <div class="mt-auto flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="font-label-caps text-[10px] text-outline">Price per ${p.weight || '500g'}</span>
+              <span class="text-primary font-bold md:font-headline-md text-sm md:text-xl">&#8377;${p.price}</span>
+            </div>
+            <button onclick="event.stopPropagation();KK.addToCart('${p.id}')" class="p-2 md:p-3 bg-primary-container text-on-primary-container rounded-full hover:bg-primary transition-colors shadow-sm active:scale-90">
+              <span class="material-symbols-outlined text-sm md:text-base">add_shopping_cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  } catch(e) {
+    console.error('Failed to load products:', e);
+  }
+}
+
+// Wire category filters
+document.querySelectorAll('[data-category]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentCategory = btn.dataset.category;
+    loadProducts();
+  });
+});
+
+// Load on init
+loadProducts();
+</script>
+</body></html>

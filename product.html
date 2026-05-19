@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="background:#18120b"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Noto+Serif:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<title>Product — Karupatti Kadai</title>
+<link rel="icon" type="image/png" href="/video/logo.png" />
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#825500",
+                    "on-primary": "#452b00",
+                    "on-tertiary-fixed-variant": "#3b4d14",
+                    "secondary-fixed-dim": "#e3bfad",
+                    "tertiary-fixed": "#d4eca2",
+                    "on-secondary-fixed-variant": "#5a4134",
+                    "error-container": "#93000a",
+                    "background": "#18120b",
+                    "on-secondary-container": "#d4b19f",
+                    "primary-fixed-dim": "#ffb952",
+                    "surface-container-low": "#211b13",
+                    "surface-variant": "#3b342b",
+                    "tertiary-fixed-dim": "#b8cf88",
+                    "on-background": "#eee0d3",
+                    "primary-container": "#c58308",
+                    "on-tertiary-fixed": "#141f00",
+                    "on-primary-fixed-variant": "#633f00",
+                    "surface-container-high": "#302920",
+                    "surface-container-highest": "#3b342b",
+                    "primary-fixed": "#ffddb4",
+                    "inverse-surface": "#eee0d3",
+                    "primary": "#ffb952",
+                    "error": "#ffb4ab",
+                    "surface-bright": "#40382f",
+                    "on-primary-fixed": "#291800",
+                    "on-error": "#690005",
+                    "outline-variant": "#514535",
+                    "secondary": "#e3bfad",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#18120b",
+                    "tertiary-container": "#839857",
+                    "on-surface-variant": "#d6c4af",
+                    "on-tertiary": "#253600",
+                    "surface-container": "#251f17",
+                    "tertiary": "#b8cf88",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-dim": "#18120b",
+                    "on-surface": "#eee0d3",
+                    "secondary-container": "#5d4336",
+                    "on-secondary-fixed": "#2a170c",
+                    "inverse-on-surface": "#362f27",
+                    "outline": "#9e8e7b",
+                    "on-secondary": "#422b1f",
+                    "on-primary-container": "#3c2500",
+                    "surface-container-lowest": "#130d07",
+                    "surface-tint": "#ffb952",
+                    "on-tertiary-container": "#1f2e00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-caps": ["Be Vietnam Pro"],
+                    "headline-md": ["Noto Serif"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "display-lg": ["Noto Serif"],
+                    "headline-xl": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "label-caps": ["11px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAuHg3obkFZS5ZD7cZQhvKvM5jlE42TOePA6v245gdcHjELrlFlRZKhcSJegIR0wbKwFS-GAIY08jHYoz6M9AFznJk6A0VrngOuAGxgHwxul4OG-6vnaotrPOAeHin-75QE2ft_37h3hI6rroxf-3JXV8HT8mzNbbjsvLSs1nG2-ZaKFGolnNC5mImNKhEbHiu4JD1fE8TUPXb6nHaHhkH3D85QSrLUXGeSKYjunTUIGgvtxVGYmRafBdGkZj_qseOaKy6sCv0xsDo);
+    opacity: 0.05;
+    pointer-events: none
+    }
+.glass-card {
+    background: rgba(37, 31, 23, 0.7);
+    backdrop-filter: blur(20px)
+    }
+.gold-glow {
+    box-shadow: inset 0 1px 0 0 rgba(255, 215, 0, 0.2)
+    }
+.jaggery-gradient {
+    background: radial-gradient(circle at center, #3c2500 0%, #18120b 100%) fixed
+    }</style>
+</head>
+<body class="jaggery-gradient text-on-background font-body-md selection:bg-primary/30">
+<canvas class="fixed inset-0 pointer-events-none z-[9999]" id="cursor-trail"></canvas>
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-2xl shadow-primary/5 h-16 md:h-20">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter py-2 md:py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<a href="/" class="flex items-center gap-2 md:gap-3 font-display-lg text-xl md:text-2xl text-primary drop-shadow-[0_2px_4px_rgba(255,185,82,0.3)] hover:opacity-90 transition-opacity">
+  <img src="/video/logo.png" alt="Karupatti Kadai Logo" class="w-8 h-8 rounded-full border border-primary/20 object-cover shadow-md" />
+  <span>Karupatti Kadai</span>
+</a>
+<nav class="hidden lg:flex gap-6 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="/#our-story">Our Grove</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 font-bold" href="/collection">Shop All</a>
+</nav>
+</div>
+<div class="flex items-center gap-2 md:gap-4">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</button>
+<a href="/checkout" class="p-2 hover:bg-primary/10 rounded-full transition-all relative">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+<span data-cart-count class="absolute top-0 right-0 w-4 h-4 bg-primary text-on-primary text-[10px] flex items-center justify-center rounded-full font-bold" style="display:none">0</span>
+</a>
+<a href="/auth" data-auth-trigger class="p-2 hover:bg-primary/10 rounded-full transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+</a>
+<button onclick="KK.toggleWishlist(currentProductId)" id="wishlist-btn" class="p-2 hover:bg-primary/10 rounded-full transition-all hidden">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-16 md:pt-20">
+<section class="relative min-h-screen flex flex-col items-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-surface-container-lowest to-surface z-0"></div>
+<div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(255,185,82,0.1),transparent_50%)]"></div>
+<div class="relative z-10 w-full max-w-container-max px-margin-mobile md:px-gutter mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start lg:items-center py-8 md:py-section-gap">
+<div class="lg:col-span-6 relative group w-full mb-8 lg:mb-0 lg:max-w-xl mx-auto">
+<div class="absolute inset-0 bg-primary/5 blur-[120px] rounded-full scale-75 animate-pulse"></div>
+<img id="product-image" alt="Artisanal Palm Jaggery Block" class="w-full h-auto max-h-[40vh] md:max-h-[60vh] object-contain drop-shadow-[0_40px_60px_rgba(24,18,11,0.8)] transition-opacity duration-700 opacity-0 group-hover:scale-105" data-alt="A macro, cinematic 3D product shot of a massive, textured block of dark amber artisanal palm jaggery. The block sits on a raw, weathered palm wood surface, with light catching its crystalline, crystalline edges to create a golden liquid glow. In the background, soft-focus palm fronds and warm, hazy dust motes dance in the late afternoon sun. The overall lighting is high-contrast and dramatic, emphasizing the deep mahogany shadows and rich, syrupy highlights of the natural product." src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+<div class="absolute -bottom-4 left-0 md:-bottom-12 md:-left-4 glass-card p-4 md:p-6 rounded-xl border border-outline-variant/30 shadow-2xl flex items-center gap-3 md:gap-4">
+<div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-xl md:text-2xl" data-icon="eco" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div>
+<p class="font-label-caps text-[10px] md:text-label-caps text-primary uppercase">Pure Origin</p>
+<p class="font-headline-md text-sm md:text-body-lg text-on-surface">Tuticorin Groves, TN</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-3 md:gap-5">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-[10px] md:text-label-caps text-tertiary-fixed-dim bg-tertiary-container/20 px-3 py-1 rounded-full w-fit backdrop-blur-sm border border-tertiary-container/30">Limited Harvest</span>
+<h1 id="product-title" class="font-display-lg text-2xl md:text-headline-xl text-on-surface leading-tight">Artisanal Block <span class="text-primary italic">Palm Gold</span></h1>
+</div>
+<p id="product-description" class="font-body-md text-sm md:text-body-md text-on-surface-variant leading-relaxed">
+                        Hand-pressed using ancestral techniques in the heart of the southern groves. Our signature block is slow-boiled over palm wood fires, retaining every mineral and a deep, smoky caramel profile that defines pure luxury.
+                    </p>
+<div class="grid grid-cols-2 gap-4 py-4 border-y border-outline-variant/20">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Iron Content</span>
+<span id="product-iron" class="font-headline-md text-xl md:text-headline-md text-on-surface">11.4mg</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">GI Index</span>
+<span id="product-gi" class="font-headline-md text-xl md:text-headline-md text-on-surface">35 Low</span>
+</div>
+</div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 md:py-4">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline">Price per <span id="product-weight">500g</span></span>
+<span id="product-price" class="font-display-lg text-2xl md:text-headline-xl text-primary font-bold">₹850.00</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-highest rounded-full px-6 md:px-4 py-3 md:py-2 border border-outline-variant/30 w-full md:w-auto">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="remove">remove</span></button>
+<span class="px-6 md:px-4 font-bold text-on-surface text-lg">01</span>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="add">add</span></button>
+</div>
+</div>
+<button onclick="addProductToCart()" id="add-cart-btn" class="w-full bg-primary text-on-primary py-4 md:py-5 rounded-xl font-bold text-body-md shadow-xl shadow-primary/20 hover:bg-primary-container transition-all active:scale-[0.98] gold-glow relative overflow-hidden group text-center">
+<div class="absolute inset-0 grain-overlay"></div>
+<span class="relative z-10 flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+                            Add to Cart
+                        </span>
+</button>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="w-full relative overflow-hidden mt-16 md:mt-section-gap bg-surface-container-highest border-t border-outline-variant/20">
+<div class="flex flex-col lg:flex-row justify-between items-center px-margin-mobile md:px-gutter py-12 md:py-section-gap max-w-container-max mx-auto gap-8 md:gap-12 text-center lg:text-left">
+<div class="flex flex-col gap-4">
+<span class="font-display-lg text-primary text-2xl md:text-headline-md">Karupatti Kadai</span>
+<p class="font-label-caps text-[10px] md:text-label-caps text-on-surface-variant uppercase tracking-widest">Liquid Gold from the Palm Grove.</p>
+<p class="font-body-md text-sm md:text-body-md text-on-surface-variant max-w-xs mt-2 md:mt-4 mx-auto lg:mx-0">Preserving ancestral sweetness through sustainable palm cultivation and artisanal craftsmanship.</p>
+</div>
+<div class="grid grid-cols-2 gap-x-8 md:gap-x-12 gap-y-4">
+<a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary/50 underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary/50 underline-offset-4 transition-all" href="#">Shipping &amp; Returns</a>
+
+<a class="font-body-md text-sm md:text-body-md text-on-surface-variant hover:text-on-surface hover:underline decoration-primary/50 underline-offset-4 transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-6 items-center lg:items-end w-full lg:w-auto">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="public">public</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary/10 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="share">share</span>
+</div>
+</div>
+<p class="font-label-caps text-[10px] md:text-label-caps text-on-surface-variant">© 2026 Karupatti Kadai. Liquid Gold from the Palm Grove.</p>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+</footer>
+<script>
+    const canvas = document.getElementById('cursor-trail');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = (Math.random() - 0.5) * 1.5;
+        this.speedY = (Math.random() - 0.5) * 1.5;
+        this.color = '#ffb952'; // Palm Gold primary color
+        this.alpha = 1;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.alpha > 0.01) this.alpha -= 0.02;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    function handleParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        particles[i].update();
+        particles[i].draw();
+        if (particles[i].alpha <= 0.01) {
+          particles.splice(i, 1);
+          i--;
+        }
+      }
+    }
+
+    window.addEventListener('mousemove', (e) => {
+      for (let i = 0; i < 2; i++) {
+        particles.push(new Particle(e.clientX, e.clientY));
+      }
+    });
+
+    window.addEventListener('touchstart', (e) => {
+      for (let i = 0; i < 5; i++) {
+        particles.push(new Particle(e.touches[0].clientX, e.touches[0].clientY));
+      }
+    });
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      handleParticles();
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+<script src="/js/app.js"></script>
+<script>
+let currentProductId = null;
+let currentProduct = null;
+let qty = 1;
+
+// Quantity controls
+document.querySelectorAll('[data-icon="remove"]').forEach(btn => {
+  btn.parentElement.addEventListener('click', () => {
+    if (qty > 1) { qty--; updateQtyDisplay(); }
+  });
+});
+document.querySelectorAll('[data-icon="add"]').forEach(btn => {
+  btn.parentElement.addEventListener('click', () => {
+    qty++; updateQtyDisplay();
+  });
+});
+
+function updateQtyDisplay() {
+  const qtyEl = document.querySelector('.px-6.font-bold.text-on-surface.text-lg, .px-4.font-bold.text-on-surface.text-lg');
+  if (qtyEl) qtyEl.textContent = String(qty).padStart(2, '0');
+}
+
+async function addProductToCart() {
+  if (!currentProductId) return;
+  const btn = document.getElementById('add-cart-btn');
+  btn.disabled = true;
+  try {
+    await KK.addToCart(currentProductId, qty);
+  } catch(e) {}
+  btn.disabled = false;
+}
+
+// Load product from URL params
+async function loadProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+  if (!slug) return;
+  try {
+    const product = await KK.getProduct(slug);
+    currentProductId = product.id;
+    document.getElementById('wishlist-btn').classList.remove('hidden');
+    document.title = product.name + ' - Karupatti Kadai';
+    const img = document.getElementById('product-image');
+    img.src = product.image_url || '';
+    img.onload = () => img.classList.remove('opacity-0');
+    document.getElementById('product-title').textContent = product.name;
+    document.getElementById('product-description').textContent = product.description || product.short_description;
+    document.getElementById('product-price').innerHTML = '&#8377;' + product.price;
+    document.getElementById('product-weight').textContent = product.weight || '500g';
+    document.getElementById('product-iron').textContent = product.iron_content || 'N/A';
+    document.getElementById('product-gi').textContent = product.gi_index || 'N/A';
+  } catch(e) {
+    console.error('Failed to load product', e);
+  }
+}
+
+loadProduct();
+</script>
+</body></html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style="background:#18120b">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Karupatti Kadai — Pure Traditional Palm Jaggery</title>
+  <link rel="icon" type="image/png" href="/video/logo.png" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#825500",
+            "on-primary": "#452b00",
+            "on-tertiary-fixed-variant": "#3b4d14",
+            "secondary-fixed-dim": "#e3bfad",
+            "tertiary-fixed": "#d4eca2",
+            "on-secondary-fixed-variant": "#5a4134",
+            "error-container": "#93000a",
+            "background": "#18120b",
+            "on-secondary-container": "#d4b19f",
+            "primary-fixed-dim": "#ffb952",
+            "surface-container-low": "#211b13",
+            "surface-variant": "#3b342b",
+            "tertiary-fixed-dim": "#b8cf88",
+            "on-background": "#eee0d3",
+            "primary-container": "#c58308",
+            "on-tertiary-fixed": "#141f00",
+            "on-primary-fixed-variant": "#633f00",
+            "surface-container-high": "#302920",
+            "surface-container-highest": "#3b342b",
+            "primary-fixed": "#ffddb4",
+            "inverse-surface": "#eee0d3",
+            "primary": "#ffb952",
+            "error": "#ffb4ab",
+            "surface-bright": "#40382f",
+            "on-primary-fixed": "#291800",
+            "on-error": "#690005",
+            "outline-variant": "#514535",
+            "secondary": "#e3bfad",
+            "on-error-container": "#ffdad6",
+            "surface": "#18120b",
+            "tertiary-container": "#839857",
+            "on-surface-variant": "#d6c4af",
+            "on-tertiary": "#253600",
+            "surface-container": "#251f17",
+            "tertiary": "#b8cf88",
+            "secondary-fixed": "#ffdbca",
+            "surface-dim": "#18120b",
+            "on-surface": "#eee0d3",
+            "secondary-container": "#5d4336",
+            "on-secondary-fixed": "#2a170c",
+            "inverse-on-surface": "#362f27",
+            "outline": "#9e8e7b",
+            "on-secondary": "#422b1f",
+            "on-primary-container": "#3c2500",
+            "surface-container-lowest": "#130d07",
+            "surface-tint": "#ffb952",
+            "on-tertiary-container": "#1f2e00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "unit": "8px",
+            "section-gap": "80px",
+            "gutter": "16px",
+            "margin-mobile": "16px",
+            "container-max": "1280px"
+          },
+          "fontFamily": {
+            "body-md": ["Be Vietnam Pro"],
+            "label-caps": ["Be Vietnam Pro"],
+            "headline-md": ["Noto Serif"],
+            "body-lg": ["Be Vietnam Pro"],
+            "display-lg": ["Noto Serif"],
+            "headline-xl": ["Noto Serif"]
+          },
+          "fontSize": {
+            "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+
+    .grain-overlay {
+      background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCAjsWVLRhUyDL3Cc1loQ1KPn2R-XVCsJwZ4KUq3BUE6akN6hqTcOJ56Wc0yywtbp5TbEUgjSpWD7SPtajMBavgS7nDFg-ltBw6YjkG6LwXejfL3NiNNv_-yxjJgmBYIN92KE9EHRD9M6svjEsK6L0E5IkmUsSbFdO7qYEfdEnLK71UsosftMdupSWAxZynwucPcf3MHAsKRdutJy8rOCL8SVkHOvmyDl5aRL0Pojm_VzeYZ4VzW_dvqLA7jwBSBzzT5g7Wl95yWVM);
+      opacity: 0.05;
+      pointer-events: none
+    }
+
+    .glass-card {
+      backdrop-filter: blur(20px);
+      background: linear-gradient(135deg, rgba(59, 52, 43, 0.4) 0%, rgba(24, 18, 11, 0.6) 100%)
+    }
+
+    .gold-dust {
+      background: radial-gradient(circle, rgba(255, 185, 82, 0.2) 0%, rgba(255, 185, 82, 0) 70%)
+    }
+
+    .jaggery-gradient {
+      background: radial-gradient(circle at center, #3c2500 0%, #18120b 100%) fixed
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    .palm-particle {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #ffb952;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      box-shadow: 0 0 8px #ffb952;
+      opacity: 0.8;
+      transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    }
+
+    #mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #mobile-menu.open {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body class="jaggery-gradient text-on-background font-body-md selection:bg-primary/30">
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-2xl">
+    <div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+      <a href="/"
+        class="flex items-center gap-3 font-display-lg text-2xl md:text-headline-md text-primary drop-shadow-[0_2px_4px_rgba(255,185,82,0.3)] hover:opacity-90 transition-opacity">
+        <img src="/video/logo.png" alt="Karupatti Kadai Logo" class="w-8 h-8 rounded-full border border-primary/20 object-cover shadow-md" />
+        <span>Karupatti Kadai</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-primary border-b-2 border-primary pb-1 font-bold font-body-md text-body-md" href="#our-story">Our
+          Grove</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md"
+          href="/collection">Shop All</a>
+        <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md"
+          href="/admin-panel" data-admin-only style="display:none">Admin</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="/checkout" class="p-2 hover:bg-primary/10 rounded-full transition-all relative">
+          <span class="material-symbols-outlined text-primary">shopping_cart</span>
+          <span data-cart-count
+            class="absolute top-0 right-0 w-4 h-4 bg-primary text-on-primary text-[10px] flex items-center justify-center rounded-full font-bold"
+            style="display:none">0</span>
+        </a>
+        <button class="md:hidden p-2 hover:bg-primary/10 rounded-full transition-all" id="menu-toggle">
+          <span class="material-symbols-outlined text-primary">menu</span>
+        </button>
+        <a href="/auth" data-auth-trigger class="hidden md:block p-2 hover:bg-primary/10 rounded-full transition-all">
+          <span class="material-symbols-outlined text-primary">account_circle</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Sidebar Menu -->
+  <div class="fixed inset-y-0 right-0 w-64 bg-surface-container-highest z-[60] shadow-2xl flex flex-col p-6 md:hidden"
+    id="mobile-menu">
+    <div class="flex justify-end mb-8">
+      <button class="p-2 rounded-full hover:bg-primary/10 text-primary" id="menu-close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-6">
+      <a class="text-primary font-bold text-lg" href="#our-story">Our Grove</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="/collection">Shop All</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="/checkout">Cart</a>
+      <hr class="border-outline-variant/20 my-2" />
+      <a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2" href="/auth"
+        data-auth-trigger>
+        <span class="material-symbols-outlined">account_circle</span> Profile
+      </a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2"
+        href="/admin-panel" data-admin-only style="display:none">
+        <span class="material-symbols-outlined">admin_panel_settings</span> Admin Panel
+      </a>
+    </div>
+  </div>
+  <div class="fixed inset-0 bg-black/60 z-[55] hidden md:hidden" id="menu-overlay"></div>
+  <main>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-8">
+      <div class="absolute inset-0 gold-dust animate-pulse"></div>
+      <div class="grain-overlay absolute inset-0"></div>
+      <div class="container max-w-container-max mx-auto px-gutter relative z-10 flex flex-col items-center text-center">
+        <div class="mb-6 relative w-full flex flex-col items-center">
+          <!-- THE ORGANIC BLOB: A more natural shape for a hand-crafted product -->
+          <div class="relative w-64 h-64 md:w-[400px] md:h-[400px] overflow-hidden"
+            style="border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; mask-image: radial-gradient(circle at center, black 10%, transparent 60%); -webkit-mask-image: radial-gradient(circle at center, black 10%, transparent 60%);">
+            <!-- The 3D Video: Blended via Lighten + Contrast Crush for perfect transparency -->
+            <video
+              class="w-full h-full object-cover scale-[1.2] brightness-[0.7] contrast-[1.6] saturate-[1.3] sepia-[0.1]"
+              style="mix-blend-mode: lighten;" autoplay loop muted playsinline>
+              <source src="/video/Product_animation_with_3D_depth_202605061559.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- Atmospheric Golden Glow -->
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[800px] md:h-[800px] bg-primary/20 blur-[200px] rounded-full -z-10 opacity-50">
+          </div>
+        </div>
+
+        <!-- Expanded Atmospheric Glow -->
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[700px] md:h-[700px] bg-primary/20 blur-[180px] rounded-full -z-10 opacity-40 scale-125">
+        </div>
+
+        <h1 class="font-display-lg text-4xl md:text-display-lg text-on-surface mb-6 tracking-tight leading-tight">
+          Pure <span class="text-primary italic">Traditional</span> Sweetness from Nature
+        </h1>
+        <p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-8 md:mb-12 max-w-2xl">
+          Experience the ancestral gold of the palm grove. Our Karupatti is hand-crafted using age-old methods,
+          preserving every drop of mineral-rich nectar.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
+          <a href="/collection"
+            class="w-full sm:w-auto px-10 py-4 bg-primary text-on-primary font-bold rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-1 transition-all flex justify-center items-center gap-2 group">
+            Shop Now
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a href="/collection"
+            class="w-full sm:w-auto px-10 py-4 bg-surface/20 backdrop-blur-md border border-primary/30 text-primary font-bold rounded-full hover:bg-surface/40 transition-all text-center">
+            Explore Products
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 animate-bounce opacity-50 hidden sm:block">
+        <span class="material-symbols-outlined text-primary text-3xl md:text-4xl">keyboard_arrow_down</span>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS SECTION -->
+    <section class="py-16 md:py-section-gap relative">
+      <div class="container max-w-container-max mx-auto px-gutter relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+          <div>
+            <p class="font-label-caps text-label-caps text-primary tracking-widest mb-2">CURATED SELECTION</p>
+            <h2 class="font-display-lg text-3xl md:text-headline-xl text-on-surface">Trending Ancestral Gold</h2>
+          </div>
+          <a href="/collection"
+            class="px-6 py-3 bg-surface/20 border border-primary/30 text-primary font-bold rounded-full hover:bg-primary hover:text-on-primary transition-all flex items-center gap-2 group text-sm">
+            View Full Catalog
+            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+        <div id="featured-products-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+          <!-- Dynamically loaded featured products injected here -->
+          <div class="col-span-full text-center py-12">
+            <div class="inline-block w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <p class="text-on-surface-variant text-sm mt-4">Loading artisanal selection...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-section-gap overflow-hidden">
+      <div class="container max-w-container-max mx-auto px-gutter">
+        <div class="flex flex-col items-center text-center mb-12">
+          <h2 class="font-headline-xl text-3xl md:text-headline-xl mb-4">Voices from the Grove</h2>
+          <p class="text-on-surface-variant max-w-xl">Join the community of connoisseurs who have rediscovered the true
+            taste of pure sweetness.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="p-6 md:p-8 bg-surface-container-highest/40 backdrop-blur-xl border border-outline-variant/20 rounded-2xl">
+            <div class="flex gap-1 text-primary mb-4">
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-on-surface mb-6 italic text-body-md md:text-body-lg">"The texture is incredible. It melts in
+              coffee like silk and adds a depth of flavor that refined sugar simply can't touch. Truly artisanal gold."
+            </p>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+                AR</div>
+              <div>
+                <h4 class="font-bold">Ananya R.</h4>
+                <span class="text-xs md:text-sm text-on-surface-variant">Artisanal Baker</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="p-6 md:p-8 bg-surface-container-highest/40 backdrop-blur-xl border border-outline-variant/20 rounded-2xl">
+            <div class="flex gap-1 text-primary mb-4">
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-on-surface mb-6 italic text-body-md md:text-body-lg">"Growing up, we only used Karupatti.
+              Finding this brand felt like a trip back to my grandmother's kitchen. The quality is unmatched."</p>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+                MS</div>
+              <div>
+                <h4 class="font-bold">Manoj S.</h4>
+                <span class="text-xs md:text-sm text-on-surface-variant">Home Chef</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="p-6 md:p-8 bg-surface-container-highest/40 backdrop-blur-xl border border-outline-variant/20 rounded-2xl">
+            <div class="flex gap-1 text-primary mb-4">
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+              <span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            <p class="text-on-surface mb-6 italic text-body-md md:text-body-lg">"As a nutritionist, I recommend
+              Karupatti Kadai for its purity. It's rare to find such high-quality palm jaggery in modern markets."</p>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
+                Dr</div>
+              <div>
+                <h4 class="font-bold">Dr. Priya K.</h4>
+                <span class="text-xs md:text-sm text-on-surface-variant">Nutritionist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY SECTIONS INTEGRATED -->
+    <section id="our-story" class="py-16 md:py-section-gap relative overflow-hidden">
+      <!-- Decorative Background Elements -->
+      <div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-secondary/10 rounded-full blur-[120px]"></div>
+      </div>
+
+      <div class="container max-w-container-max mx-auto px-gutter relative z-10">
+        <div class="text-center mb-16 md:mb-24">
+          <p class="font-label-caps text-label-caps text-primary tracking-widest mb-4">SINCE GENERATIONS</p>
+          <h2 class="font-display-lg text-3xl md:text-headline-xl text-on-surface mb-6">The Legacy of Palm Gold</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">From the sacred palm groves of
+            Tamil Nadu to your table — a legacy of pure, traditional sweetness crafted with love and ancestral wisdom.
+          </p>
+          <div class="h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent w-48 mx-auto mt-10"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-8 md:gap-12 items-center mb-16">
+          <!-- Smaller Video Section (Left) -->
+          <div class="lg:col-span-3 relative group">
+            <div class="absolute -inset-4 bg-primary/5 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+            <div class="relative glass-card rounded-3xl overflow-hidden aspect-video border border-outline-variant/20 shadow-2xl transition-all duration-700">
+              <video class="w-full h-full object-cover brightness-[0.85] contrast-[1.05]" autoplay loop muted playsinline>
+                <source src="/video/palm_jaggery_making.mp4" type="video/mp4">
+              </video>
+              <div class="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
+            </div>
+          </div>
+
+          <!-- Text Nearby (Right) -->
+          <div class="lg:col-span-2 space-y-6">
+            <div class="glass-card rounded-2xl p-6 md:p-8 border border-outline-variant/20 hover:border-primary/30 transition-all">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1">park</span>
+                <h3 class="font-headline-md text-lg text-primary">The Palm Groves</h3>
+              </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Nurtured for generations, our palms stand tall as sweet nectar flows with the first light of dawn.</p>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-6 md:p-8 border border-outline-variant/20 hover:border-primary/30 transition-all">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings:'FILL' 1">local_fire_department</span>
+                <h3 class="font-headline-md text-lg text-primary">The Craft</h3>
+              </div>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Slow-simmered in iron vats over wood fire. No chemicals — just patience and skill passed down through centuries.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Values Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+          <div
+            class="glass-card rounded-2xl p-8 border border-outline-variant/20 text-center group hover:border-primary/30 transition-all duration-500">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                style="font-variation-settings:'FILL' 1">eco</span>
+            </div>
+            <h4 class="font-headline-md text-xl text-on-surface mb-3">100% Natural</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Zero chemicals or preservatives. Our Karupatti is
+              as pure as nature intended — straight from palm to pack.</p>
+          </div>
+          <div
+            class="glass-card rounded-2xl p-8 border border-outline-variant/20 text-center group hover:border-primary/30 transition-all duration-500">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                style="font-variation-settings:'FILL' 1">diversity_3</span>
+            </div>
+            <h4 class="font-headline-md text-xl text-on-surface mb-3">Fair Trade</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">We work directly with climber families, ensuring
+              fair wages and sustainable livelihoods for real artisans.</p>
+          </div>
+          <div
+            class="glass-card rounded-2xl p-8 border border-outline-variant/20 text-center group hover:border-primary/30 transition-all duration-500">
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+              <span class="material-symbols-outlined text-primary text-3xl"
+                style="font-variation-settings:'FILL' 1">health_and_safety</span>
+            </div>
+            <h4 class="font-headline-md text-xl text-on-surface mb-3">Nutrient Rich</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Packed with iron, calcium, and antioxidants. A
+              healthy, low-GI alternative to satisfy your cravings.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer
+    class="bg-black/20 backdrop-blur-xl w-full relative overflow-hidden mt-12 md:mt-section-gap border-t border-outline-variant/20">
+    <div
+      class="flex flex-col md:flex-row justify-between items-start md:items-center px-gutter py-12 md:py-section-gap max-w-container-max mx-auto gap-8 md:gap-12">
+      <div class="flex flex-col gap-6">
+        <div class="font-display-lg text-primary text-2xl md:text-headline-md">Karupatti Kadai</div>
+        <p class="font-body-md text-on-surface-variant max-w-sm">Crafting pure, ancestral palm jaggery with a commitment
+          to tradition, health, and sustainable farming.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 md:gap-12 w-full md:w-auto">
+
+        <div class="flex flex-col gap-4">
+          <h4 class="font-label-caps text-label-caps text-primary">SUPPORT</h4>
+          <a class="text-on-surface-variant hover:text-on-surface hover:underline" href="#">Privacy Policy</a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:underline" href="#">Returns</a>
+          <a class="text-on-surface-variant hover:text-on-surface hover:underline" href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-container-max mx-auto px-gutter pb-8 flex flex-col md:flex-row justify-between items-center border-t border-outline-variant/10 pt-8 gap-4">
+      <div class="font-label-caps text-[10px] md:text-label-caps text-on-surface-variant text-center md:text-left">©
+        2026 Karupatti Kadai. Liquid Gold from the Palm Grove.</div>
+      <div class="flex gap-6">
+        <a class="text-on-surface-variant hover:text-primary" href="#"><span
+            class="material-symbols-outlined">share</span></a>
+        <a class="text-on-surface-variant hover:text-primary" href="#"><span
+            class="material-symbols-outlined">mail</span></a>
+        <a class="text-on-surface-variant hover:text-primary" href="#"><span
+            class="material-symbols-outlined">location_on</span></a>
+      </div>
+    </div>
+  </footer>
+  <button onclick="window.location.href='/checkout'"
+    class="fixed bottom-6 right-6 w-14 h-14 md:w-16 md:h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40">
+    <span class="material-symbols-outlined text-2xl md:text-3xl"
+      style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+  </button>
+  <script>
+      (function () {
+        // Particles Logic
+        const body = document.body;
+        let lastTime = 0;
+        const throttle = 40; // Throttle particle creation for performance
+
+        function handleInteraction(e) {
+          const now = Date.now();
+          if (now - lastTime < throttle) return;
+          lastTime = now;
+
+          let x, y;
+          if (e.type === 'touchmove') {
+            x = e.touches[0].clientX;
+            y = e.touches[0].clientY;
+          } else {
+            x = e.clientX;
+            y = e.clientY;
+          }
+          createParticle(x, y);
+        }
+
+        window.addEventListener('mousemove', handleInteraction);
+        window.addEventListener('touchmove', handleInteraction, { passive: true });
+
+        function createParticle(x, y) {
+          const particle = document.createElement('div');
+          particle.className = 'palm-particle';
+          const offsetX = (Math.random() - 0.5) * 8;
+          const offsetY = (Math.random() - 0.5) * 8;
+
+          particle.style.transform = `translate(${x + offsetX}px, ${y + offsetY}px) scale(1)`;
+          body.appendChild(particle);
+
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              particle.style.transform = `translate(${x + offsetX}px, ${y + offsetY}px) scale(0)`;
+              particle.style.opacity = '0';
+            }, 30);
+          });
+
+          setTimeout(() => particle.remove(), 500);
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function openMenu() {
+          mobileMenu.classList.add('open');
+          menuOverlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+          mobileMenu.classList.remove('open');
+          menuOverlay.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', openMenu);
+        menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+      })();
+  </script>
+  <script src="/js/app.js"></script>
+  <script>
+    async function loadFeaturedProducts() {
+      const grid = document.getElementById('featured-products-grid');
+      if (!grid) return;
+      try {
+        const data = await KK.getProducts({ page_size: 4 });
+        const products = (data.results || data).slice(0, 4);
+        if (!products || !products.length) {
+          grid.innerHTML = '<p class="col-span-full text-center text-on-surface-variant py-12">No products available</p>';
+          return;
+        }
+        grid.innerHTML = products.map(p => `
+          <div class="glass-card group rounded-xl p-3 md:p-4 border border-outline-variant/10 gold-glow-hover transition-all duration-500 overflow-hidden relative flex flex-col">
+            <a href="/product?slug=${p.slug}" class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4 md:mb-6 relative block">
+              <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="${p.image_url}"/>
+              ${p.badge ? `<span class="absolute top-2 right-2 md:top-3 md:right-3 ${p.badge_style || 'bg-primary/80 text-on-primary'} backdrop-blur-md px-2 py-0.5 md:px-3 md:py-1 rounded-full font-label-caps text-[8px] md:text-label-caps">${p.badge}</span>` : ''}
+            </a>
+            <div class="px-1 flex-1 flex flex-col">
+              <a href="/product?slug=${p.slug}"><h3 class="font-headline-md text-sm md:text-headline-md text-on-surface mb-1">${p.name}</h3></a>
+              <p class="text-on-surface-variant text-[10px] md:text-body-md mb-3 md:mb-4 line-clamp-2 leading-tight">${p.short_description}</p>
+              <div class="mt-auto flex justify-between items-center">
+                <div class="flex flex-col">
+                  <span class="font-label-caps text-[10px] text-outline">Price per ${p.weight || '500g'}</span>
+                  <span class="text-primary font-bold md:font-headline-md text-sm md:text-xl">&#8377;${p.price}</span>
+                </div>
+                <button onclick="event.stopPropagation();KK.addToCart('${p.id}')" class="p-2 md:p-3 bg-primary-container text-on-primary-container rounded-full hover:bg-primary transition-colors shadow-sm active:scale-90">
+                  <span class="material-symbols-outlined text-sm md:text-base">add_shopping_cart</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        console.error('Failed to load featured products:', err);
+        grid.innerHTML = '<p class="col-span-full text-center text-on-surface-variant py-12">Failed to load curated collection</p>';
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadFeaturedProducts);
+    } else {
+      loadFeaturedProducts();
+    }
+  </script>
+</body>
+</html>
