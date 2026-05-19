@@ -5,7 +5,7 @@
  */
 
 const KK = (() => {
-  const API = '/api';
+  const API = 'https://karupatti-website.onrender.com';
   let _user = null;
   let _cart = { items: [], total: 0, item_count: 0 };
   let _wishlist = [];
@@ -301,9 +301,9 @@ const KK = (() => {
     async deleteProduct(id) { return api(`/admin/products/${id}/`, { method: 'DELETE' }); },
     async toggleProduct(id) { return api(`/admin/products/${id}/toggle_active/`, { method: 'POST' }); },
     async updateStock(id, stock) { return api(`/admin/products/${id}/update_stock/`, { method: 'POST', body: { stock } }); },
-    async getOrders(params = {}) { 
+    async getOrders(params = {}) {
       const q = new URLSearchParams(params).toString();
-      return api(`/orders/admin/${q ? '?' + q : ''}`); 
+      return api(`/orders/admin/${q ? '?' + q : ''}`);
     },
     async updateOrderStatus(id, status) { return api(`/orders/admin/${id}/status/`, { method: 'PATCH', body: { status } }); },
     async getUsers(search = '') { return api(`/accounts/admin/users/${search ? '?search=' + search : ''}`); },
