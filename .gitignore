@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Django
+backend/db.sqlite3
+backend/staticfiles/
+backend/security.log
+
+# Environment
+backend/.env
+
+# Error debug files
+backend/error*.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

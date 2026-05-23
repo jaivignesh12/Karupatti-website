@@ -40,8 +40,8 @@ urlpatterns = [
     path('admin-panel', TemplateView.as_view(template_name='admin.html'), name='admin-panel'),
 ]
 
-# Also serve static HTML files directly
+# Serve frontend static files (js, video, images) in all modes
 from django.conf.urls.static import static
-if settings.DEBUG:
-    urlpatterns += static('/js/', document_root=settings.FRONTEND_DIR / 'js')
-    urlpatterns += static('/video/', document_root=settings.FRONTEND_DIR / 'video')
+urlpatterns += static('/js/', document_root=settings.FRONTEND_DIR / 'js')
+urlpatterns += static('/video/', document_root=settings.FRONTEND_DIR / 'video')
+

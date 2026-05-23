@@ -5,7 +5,7 @@
  */
 
 const KK = (() => {
-  const API = 'https://karupatti-website.onrender.com';
+  const API = 'https://karupatti-website.onrender.com/api';
   let _user = null;
   let _cart = { items: [], total: 0, item_count: 0 };
   let _wishlist = [];

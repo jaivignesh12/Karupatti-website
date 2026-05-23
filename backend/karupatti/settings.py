@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -94,18 +95,33 @@ TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
 
-# Static files - serve JS/CSS from frontend directory
+# Static files - serve JS/CSS/video from frontend directory
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     FRONTEND_DIR / 'js',
+    FRONTEND_DIR / 'video',
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+# WhiteNoise compressed static files for production
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS
+# CORS — Allow Vercel frontend and all origins
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = [
+    'accept', 'accept-encoding', 'authorization', 'content-type',
+    'dnt', 'origin', 'user-agent', 'x-csrftoken', 'x-requested-with',
+]
 
 # DRF
 REST_FRAMEWORK = {
@@ -131,6 +147,8 @@ SUPABASE_JWT_SECRET = os.getenv('SUPABASE_JWT_SECRET', '')
 # Session
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  # 30 days
+SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = not DEBUG
 
 # OWASP A05: Security Headers Configuration
 SECURE_BROWSER_XSS_FILTER = True
