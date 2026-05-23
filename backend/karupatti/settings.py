@@ -67,18 +67,15 @@ WSGI_APPLICATION = 'karupatti.wsgi.application'
 _db_url = os.getenv('DATABASE_URL', '')
 _sqlite_url = f'sqlite:///{BASE_DIR / "db.sqlite3"}'
 
-if _db_url and _db_url.startswith('postgresql'):
-    import socket
+if _db_url and 'postgresql' in _db_url:
     try:
-        # Quick DNS check to see if the Supabase host is reachable
-        from urllib.parse import urlparse
-        _parsed = urlparse(_db_url)
-        socket.setdefaulttimeout(3)
-        socket.getaddrinfo(_parsed.hostname, _parsed.port or 5432)
         DATABASES = {'default': dj_database_url.parse(_db_url)}
-        print(f"[DB] Connected to PostgreSQL: {_parsed.hostname}")
-    except (socket.gaierror, socket.timeout, OSError) as e:
-        print(f"[DB] PostgreSQL unreachable ({e}), falling back to SQLite")
+        DATABASES['default']['CONN_MAX_AGE'] = 600
+        DATABASES['default']['CONN_HEALTH_CHECKS'] = True
+        DATABASES['default'].setdefault('OPTIONS', {})['connect_timeout'] = 10
+        print(f"[DB] Configured PostgreSQL")
+    except Exception as e:
+        print(f"[DB] PostgreSQL config failed ({e}), falling back to SQLite")
         DATABASES = {'default': dj_database_url.parse(_sqlite_url)}
 else:
     DATABASES = {'default': dj_database_url.parse(_db_url or _sqlite_url)}
